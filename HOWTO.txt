@@ -1,0 +1,49 @@
+This Help document only for debian-based linux distros (tested on ubuntu >= 16.04 or linux mint >= 18) 
+1- first install this reqirements(For debian bases):
+
+sudo apt update 
+
+sudo apt install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
+
+sudo apt install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
+
+sudo apt install libboost-all-dev
+
+sudo apt install software-properties-common
+
+sudo apt install libdb5.3-dev libdb5.3+-dev
+
+sudo apt install libminiupnpc-dev
+
+sudo apt install libzmq3-dev
+
+sudo apt install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
+
+sudo apt install libqt4-dev libprotobuf-dev protobuf-compiler
+
+
+2- compile source code :
+	2.1- cd to src directory 
+	2.2- make -f makefile.unix
+
+3- run ./camelcoin-qt on main directory
+
+4- for seed server delete any file in ~/.camelcoin
+	4.1- create camelcoin.conf file in it
+	4.2- write this statements in it:
+		server=1
+		rpcuser=username (your account username)
+		rpcpassword=password (your account password)
+		
+5- on other servers it is better to do 1 - 3 then do these:
+	5.1- create camelcoin.conf file in ~/.camelcoin
+	5.2- write these statements on it:
+		addnode=seed_ip (Enter seed server ip)
+		
+	5.3- run camelcoin-qt with
+		./camelcoin-qt
+	5.3- go to debug from help menu and go to console tab:
+		you can use help command for help
+		use "setgenerate ture" for mining camelcoins (if you win you will get 20 CML)
+		
+6- you can compile source code for windows
